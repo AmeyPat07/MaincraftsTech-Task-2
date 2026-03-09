@@ -23,6 +23,8 @@ task0.1/
 - **Database**: MySQL with Spring Data JPA for data persistence
 - **Form Handling**: Contact form data stored in database
 - **API Endpoints**: RESTful endpoints for form submission and data retrieval
+- **Backend**: Spring Boot REST API to handle form submissions
+- **Form Handling**: Contact form data is printed to console (no database yet)
 
 ## Prerequisites
 
@@ -47,6 +49,9 @@ task0.1/
 
 3. Update database credentials in `src/main/resources/application.properties` if needed.
 
+
+## Running the Application
+
 ### Backend (Spring Boot)
 
 1. Navigate to the project directory:
@@ -70,6 +75,11 @@ task0.1/
 ## API Endpoints
 
 ### POST /api/contact
+3. Fill out the form and submit - the data will be printed to the console
+
+## API Endpoint
+
+### POST /contact
 
 Handles contact form submissions.
 
@@ -106,12 +116,18 @@ curl http://localhost:8080/api/contacts
 USE contact_db;
 SELECT * FROM contacts;
 ```
+**Response:**
+- Returns "Form submitted successfully!" message
+
+**Console Output:**
+The submitted form data (name, email, message) is printed to the console.
 
 ## Technologies Used
 
 - **Frontend**: HTML5, Tailwind CSS, Font Awesome
 - **Backend**: Java 17, Spring Boot 3.2.0, Spring Data JPA
 - **Database**: MySQL 8.0
+- **Backend**: Java 17, Spring Boot 3.2.0, Maven
 - **Build Tool**: Maven
 
 ## Future Enhancements
@@ -126,3 +142,11 @@ SELECT * FROM contacts;
 ## Author
 
 Created by Amey Codes for Maincrafts Task 2
+- Database integration for storing contact submissions
+- Email notifications for new submissions
+- Form validation improvements
+- Admin dashboard for viewing submissions
+
+## Author
+
+Created by Amey Codes for Maincrafts Task 0.1
